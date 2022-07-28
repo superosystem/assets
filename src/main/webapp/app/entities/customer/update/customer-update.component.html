@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center">
   <div class="col-8">
     <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
-      <h2 id="jhi-customer-heading" data-cy="CustomerCreateUpdateHeading" jhiTranslate="eCommerceApp.customer.home.createOrEditLabel">
+      <h2 id="jhi-customer-heading" data-cy="CustomerCreateUpdateHeading" jhiTranslate="storeApp.customer.home.createOrEditLabel">
         Create or edit a Customer
       </h2>
 
@@ -14,7 +14,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.customer.firstName" for="field_firstName">First Name</label>
+          <label class="form-label" jhiTranslate="storeApp.customer.firstName" for="field_firstName">First Name</label>
           <input type="text" class="form-control" name="firstName" id="field_firstName" data-cy="firstName" formControlName="firstName" />
           <div *ngIf="editForm.get('firstName')!.invalid && (editForm.get('firstName')!.dirty || editForm.get('firstName')!.touched)">
             <small
@@ -28,7 +28,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.customer.lastName" for="field_lastName">Last Name</label>
+          <label class="form-label" jhiTranslate="storeApp.customer.lastName" for="field_lastName">Last Name</label>
           <input type="text" class="form-control" name="lastName" id="field_lastName" data-cy="lastName" formControlName="lastName" />
           <div *ngIf="editForm.get('lastName')!.invalid && (editForm.get('lastName')!.dirty || editForm.get('lastName')!.touched)">
             <small
@@ -42,10 +42,10 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.customer.gender" for="field_gender">Gender</label>
+          <label class="form-label" jhiTranslate="storeApp.customer.gender" for="field_gender">Gender</label>
           <select class="form-control" name="gender" formControlName="gender" id="field_gender" data-cy="gender">
-            <option [ngValue]="null">{{ 'eCommerceApp.Gender.null' | translate }}</option>
-            <option *ngFor="let gender of genderValues" [value]="gender">{{ 'eCommerceApp.Gender.' + gender | translate }}</option>
+            <option [ngValue]="null">{{ 'storeApp.Gender.null' | translate }}</option>
+            <option *ngFor="let gender of genderValues" [value]="gender">{{ 'storeApp.Gender.' + gender | translate }}</option>
           </select>
           <div *ngIf="editForm.get('gender')!.invalid && (editForm.get('gender')!.dirty || editForm.get('gender')!.touched)">
             <small class="form-text text-danger" *ngIf="editForm.get('gender')?.errors?.required" jhiTranslate="entity.validation.required">
@@ -55,7 +55,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.customer.email" for="field_email">Email</label>
+          <label class="form-label" jhiTranslate="storeApp.customer.email" for="field_email">Email</label>
           <input type="text" class="form-control" name="email" id="field_email" data-cy="email" formControlName="email" />
           <div *ngIf="editForm.get('email')!.invalid && (editForm.get('email')!.dirty || editForm.get('email')!.touched)">
             <small class="form-text text-danger" *ngIf="editForm.get('email')?.errors?.required" jhiTranslate="entity.validation.required">
@@ -73,7 +73,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.customer.phone" for="field_phone">Phone</label>
+          <label class="form-label" jhiTranslate="storeApp.customer.phone" for="field_phone">Phone</label>
           <input type="text" class="form-control" name="phone" id="field_phone" data-cy="phone" formControlName="phone" />
           <div *ngIf="editForm.get('phone')!.invalid && (editForm.get('phone')!.dirty || editForm.get('phone')!.touched)">
             <small class="form-text text-danger" *ngIf="editForm.get('phone')?.errors?.required" jhiTranslate="entity.validation.required">
@@ -83,7 +83,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.customer.addressLine1" for="field_addressLine1">Address Line 1</label>
+          <label class="form-label" jhiTranslate="storeApp.customer.addressLine1" for="field_addressLine1">Address Line 1</label>
           <input
             type="text"
             class="form-control"
@@ -106,7 +106,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.customer.addressLine2" for="field_addressLine2">Address Line 2</label>
+          <label class="form-label" jhiTranslate="storeApp.customer.addressLine2" for="field_addressLine2">Address Line 2</label>
           <input
             type="text"
             class="form-control"
@@ -118,7 +118,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.customer.city" for="field_city">City</label>
+          <label class="form-label" jhiTranslate="storeApp.customer.city" for="field_city">City</label>
           <input type="text" class="form-control" name="city" id="field_city" data-cy="city" formControlName="city" />
           <div *ngIf="editForm.get('city')!.invalid && (editForm.get('city')!.dirty || editForm.get('city')!.touched)">
             <small class="form-text text-danger" *ngIf="editForm.get('city')?.errors?.required" jhiTranslate="entity.validation.required">
@@ -128,7 +128,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.customer.country" for="field_country">Country</label>
+          <label class="form-label" jhiTranslate="storeApp.customer.country" for="field_country">Country</label>
           <input type="text" class="form-control" name="country" id="field_country" data-cy="country" formControlName="country" />
           <div *ngIf="editForm.get('country')!.invalid && (editForm.get('country')!.dirty || editForm.get('country')!.touched)">
             <small
@@ -142,7 +142,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.customer.user" for="field_user">User</label>
+          <label class="form-label" jhiTranslate="storeApp.customer.user" for="field_user">User</label>
           <select class="form-control" id="field_user" data-cy="user" name="user" formControlName="user">
             <option [ngValue]="null"></option>
             <option

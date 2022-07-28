@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "e-commerce": {
+    "store": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -76,15 +76,15 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "e-commerce:build:development",
+            "browserTarget": "store:build:development",
             "port": 4200
           },
           "configurations": {
             "production": {
-              "browserTarget": "e-commerce:build:production"
+              "browserTarget": "store:build:production"
             },
             "development": {
-              "browserTarget": "e-commerce:build:development"
+              "browserTarget": "store:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,7 +98,7 @@
       }
     }
   },
-  "defaultProject": "e-commerce",
+  "defaultProject": "store",
   "cli": {
     "cache": {
       "enabled": true,

@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center">
   <div class="col-8">
     <div *ngIf="invoice">
-      <h2 data-cy="invoiceDetailsHeading"><span jhiTranslate="eCommerceApp.invoice.detail.title">Invoice</span></h2>
+      <h2 data-cy="invoiceDetailsHeading"><span jhiTranslate="storeApp.invoice.detail.title">Invoice</span></h2>
 
       <hr />
 
@@ -14,31 +14,31 @@
         <dd>
           <span>{{ invoice.id }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.invoice.date">Date</span></dt>
+        <dt><span jhiTranslate="storeApp.invoice.date">Date</span></dt>
         <dd>
           <span>{{ invoice.date | formatMediumDatetime }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.invoice.details">Details</span></dt>
+        <dt><span jhiTranslate="storeApp.invoice.details">Details</span></dt>
         <dd>
           <span>{{ invoice.details }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.invoice.status">Status</span></dt>
+        <dt><span jhiTranslate="storeApp.invoice.status">Status</span></dt>
         <dd>
-          <span jhiTranslate="{{ 'eCommerceApp.InvoiceStatus.' + invoice.status }}">{{ invoice.status }}</span>
+          <span jhiTranslate="{{ 'storeApp.InvoiceStatus.' + invoice.status }}">{{ invoice.status }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.invoice.paymentMethod">Payment Method</span></dt>
+        <dt><span jhiTranslate="storeApp.invoice.paymentMethod">Payment Method</span></dt>
         <dd>
-          <span jhiTranslate="{{ 'eCommerceApp.PaymentMethod.' + invoice.paymentMethod }}">{{ invoice.paymentMethod }}</span>
+          <span jhiTranslate="{{ 'storeApp.PaymentMethod.' + invoice.paymentMethod }}">{{ invoice.paymentMethod }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.invoice.paymentDate">Payment Date</span></dt>
+        <dt><span jhiTranslate="storeApp.invoice.paymentDate">Payment Date</span></dt>
         <dd>
           <span>{{ invoice.paymentDate | formatMediumDatetime }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.invoice.paymentAmount">Payment Amount</span></dt>
+        <dt><span jhiTranslate="storeApp.invoice.paymentAmount">Payment Amount</span></dt>
         <dd>
           <span>{{ invoice.paymentAmount }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.invoice.order">Order</span></dt>
+        <dt><span jhiTranslate="storeApp.invoice.order">Order</span></dt>
         <dd>
           <div *ngIf="invoice.order">
             <a [routerLink]="['/product-order', invoice.order?.id, 'view']">{{ invoice.order?.id }}</a>

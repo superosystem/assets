@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center">
   <div class="col-8">
     <div *ngIf="product">
-      <h2 data-cy="productDetailsHeading"><span jhiTranslate="eCommerceApp.product.detail.title">Product</span></h2>
+      <h2 data-cy="productDetailsHeading"><span jhiTranslate="storeApp.product.detail.title">Product</span></h2>
 
       <hr />
 
@@ -14,23 +14,23 @@
         <dd>
           <span>{{ product.id }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.product.name">Name</span></dt>
+        <dt><span jhiTranslate="storeApp.product.name">Name</span></dt>
         <dd>
           <span>{{ product.name }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.product.description">Description</span></dt>
+        <dt><span jhiTranslate="storeApp.product.description">Description</span></dt>
         <dd>
           <span>{{ product.description }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.product.price">Price</span></dt>
+        <dt><span jhiTranslate="storeApp.product.price">Price</span></dt>
         <dd>
           <span>{{ product.price }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.product.sizeProduct">Size Product</span></dt>
+        <dt><span jhiTranslate="storeApp.product.sizeProduct">Size Product</span></dt>
         <dd>
-          <span jhiTranslate="{{ 'eCommerceApp.SizeProduct.' + product.sizeProduct }}">{{ product.sizeProduct }}</span>
+          <span jhiTranslate="{{ 'storeApp.SizeProduct.' + product.sizeProduct }}">{{ product.sizeProduct }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.product.image">Image</span></dt>
+        <dt><span jhiTranslate="storeApp.product.image">Image</span></dt>
         <dd>
           <div *ngIf="product.image">
             <a (click)="openFile(product.image, product.imageContentType)">
@@ -39,7 +39,7 @@
             {{ product.imageContentType }}, {{ byteSize(product.image) }}
           </div>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.product.productCategory">Product Category</span></dt>
+        <dt><span jhiTranslate="storeApp.product.productCategory">Product Category</span></dt>
         <dd>
           <div *ngIf="product.productCategory">
             <a [routerLink]="['/product-category', product.productCategory?.id, 'view']">{{ product.productCategory?.id }}</a>

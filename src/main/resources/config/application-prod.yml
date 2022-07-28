@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: INFO
     tech.jhipster: INFO
-    com.gusrylmubarok.ecommerce: INFO
+    com.gusrylmubarok.store: INFO
 
 eureka:
   instance:
@@ -46,13 +46,13 @@ spring:
         max-attempts: 100
       uri: http://admin:${jhipster.registry.password}@localhost:8761/config
       # name of the config server's property source (file.yml) that we want to use
-      name: ECommerce
+      name: Store
       profile: prod
       label: main # toggle to switch to a different version of the configuration as stored in git
       # it can be set to any label, branch or commit of the configuration source Git repository
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/ECommerce?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/Store?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
     username: root
     password:
     hikari:
@@ -91,7 +91,7 @@ spring:
 
 # ===================================================================
 # To enable TLS in production, generate a certificate using:
-# keytool -genkey -alias ecommerce -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+# keytool -genkey -alias store -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
 #
 # You can also use Let's Encrypt:
 # https://maximilian-boehm.com/hp2121/Create-a-Java-Keystore-JKS-from-Let-s-Encrypt-Certificates.htm

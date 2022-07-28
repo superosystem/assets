@@ -4,7 +4,7 @@
 <configuration scan="true">
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <logger name="com.gusrylmubarok.ecommerce" level="INFO"/>
+    <logger name="com.gusrylmubarok.store" level="INFO"/>
 
     <logger name="tech.jhipster" level="WARN"/>
 

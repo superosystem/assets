@@ -1,11 +1,11 @@
 <div>
   <h2 id="page-heading" data-cy="ProductOrderHeading">
-    <span jhiTranslate="eCommerceApp.productOrder.home.title">Product Orders</span>
+    <span jhiTranslate="storeApp.productOrder.home.title">Product Orders</span>
 
     <div class="d-flex justify-content-end">
       <button class="btn btn-info me-2" (click)="loadPage()" [disabled]="isLoading">
         <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
-        <span jhiTranslate="eCommerceApp.productOrder.home.refreshListLabel">Refresh List</span>
+        <span jhiTranslate="storeApp.productOrder.home.refreshListLabel">Refresh List</span>
       </button>
 
       <button
@@ -15,7 +15,7 @@
         [routerLink]="['/product-order/new']"
       >
         <fa-icon icon="plus"></fa-icon>
-        <span jhiTranslate="eCommerceApp.productOrder.home.createLabel"> Create a new Product Order </span>
+        <span jhiTranslate="storeApp.productOrder.home.createLabel"> Create a new Product Order </span>
       </button>
     </div>
   </h2>
@@ -25,7 +25,7 @@
   <jhi-alert></jhi-alert>
 
   <div class="alert alert-warning" id="no-result" *ngIf="productOrders?.length === 0">
-    <span jhiTranslate="eCommerceApp.productOrder.home.notFound">No productOrders found</span>
+    <span jhiTranslate="storeApp.productOrder.home.notFound">No productOrders found</span>
   </div>
 
   <div class="table-responsive" id="entities" *ngIf="productOrders && productOrders.length > 0">
@@ -34,16 +34,16 @@
         <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="loadPage()">
           <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
           <th scope="col" jhiSortBy="placedDate">
-            <span jhiTranslate="eCommerceApp.productOrder.placedDate">Placed Date</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.productOrder.placedDate">Placed Date</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="status">
-            <span jhiTranslate="eCommerceApp.productOrder.status">Status</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.productOrder.status">Status</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="code">
-            <span jhiTranslate="eCommerceApp.productOrder.code">Code</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.productOrder.code">Code</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="customer.id">
-            <span jhiTranslate="eCommerceApp.productOrder.customer">Customer</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.productOrder.customer">Customer</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col"></th>
         </tr>
@@ -54,7 +54,7 @@
             <a [routerLink]="['/product-order', productOrder.id, 'view']">{{ productOrder.id }}</a>
           </td>
           <td>{{ productOrder.placedDate | formatMediumDatetime }}</td>
-          <td jhiTranslate="{{ 'eCommerceApp.OrderStatus.' + productOrder.status }}">{{ productOrder.status }}</td>
+          <td jhiTranslate="{{ 'storeApp.OrderStatus.' + productOrder.status }}">{{ productOrder.status }}</td>
           <td>{{ productOrder.code }}</td>
           <td>
             <div *ngIf="productOrder.customer">

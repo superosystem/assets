@@ -1,5 +1,5 @@
 {
-  "eCommerceApp": {
+  "storeApp": {
     "PaymentMethod": {
       "null": "",
       "CREDIT_CARD": "CREDIT_CARD",

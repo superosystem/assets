@@ -33,7 +33,7 @@
     }
   ],
   "fluentMethods": true,
-  "javadoc": "Product sold by the Ecommerce",
+  "javadoc": "Product sold by the Store",
   "jpaMetamodelFiltering": false,
   "name": "Product",
   "pagination": "pagination",

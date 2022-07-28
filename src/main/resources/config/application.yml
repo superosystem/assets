@@ -34,8 +34,8 @@ eureka:
     instance-info-replication-interval-seconds: 10
     registry-fetch-interval-seconds: 10
   instance:
-    appname: ecommerce
-    instanceId: ecommerce:${spring.application.instance-id:${random.value}}
+    appname: store
+    instanceId: store:${spring.application.instance-id:${random.value}}
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
     status-page-url-path: ${management.endpoints.web.base-path}/info
@@ -116,7 +116,7 @@ management:
 
 spring:
   application:
-    name: ECommerce
+    name: Store
   profiles:
     # The commented value for `active` can be replaced with valid Spring profiles to load.
     # Otherwise, it will be filled in by gradle when building the JAR file
@@ -151,7 +151,7 @@ spring:
       hibernate.query.in_clause_parameter_padding: true
       hibernate.cache.region.factory_class: com.hazelcast.hibernate.HazelcastCacheRegionFactory
       hibernate.cache.use_minimal_puts: true
-      hibernate.cache.hazelcast.instance_name: ECommerce
+      hibernate.cache.hazelcast.instance_name: Store
       hibernate.cache.hazelcast.use_lite_member: true
     hibernate:
       ddl-auto: none
@@ -167,13 +167,13 @@ spring:
       matching-strategy: ant_path_matcher
   task:
     execution:
-      thread-name-prefix: e-commerce-task-
+      thread-name-prefix: store-task-
       pool:
         core-size: 2
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: e-commerce-scheduling-
+      thread-name-prefix: store-scheduling-
       pool:
         size: 2
   thymeleaf:
@@ -204,7 +204,7 @@ info:
 
 jhipster:
   clientApp:
-    name: 'eCommerceApp'
+    name: 'storeApp'
   # By default CORS is disabled. Uncomment to enable.
   # cors:
   #   allowed-origins: "http://localhost:8100,http://localhost:9000"
@@ -214,12 +214,12 @@ jhipster:
   #   allow-credentials: true
   #   max-age: 1800
   mail:
-    from: ECommerce@localhost
+    from: Store@localhost
   api-docs:
     default-include-pattern: ${server.servlet.context-path:}/api/**
     management-include-pattern: ${server.servlet.context-path:}/management/**
-    title: E Commerce API
-    description: E Commerce API documentation
+    title: Store API
+    description: Store API documentation
     version: 0.0.1
     terms-of-service-url:
     contact-name:

@@ -4,7 +4,7 @@
       <h2
         id="jhi-product-order-heading"
         data-cy="ProductOrderCreateUpdateHeading"
-        jhiTranslate="eCommerceApp.productOrder.home.createOrEditLabel"
+        jhiTranslate="storeApp.productOrder.home.createOrEditLabel"
       >
         Create or edit a Product Order
       </h2>
@@ -18,7 +18,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.productOrder.placedDate" for="field_placedDate">Placed Date</label>
+          <label class="form-label" jhiTranslate="storeApp.productOrder.placedDate" for="field_placedDate">Placed Date</label>
           <div class="d-flex">
             <input
               id="field_placedDate"
@@ -49,11 +49,11 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.productOrder.status" for="field_status">Status</label>
+          <label class="form-label" jhiTranslate="storeApp.productOrder.status" for="field_status">Status</label>
           <select class="form-control" name="status" formControlName="status" id="field_status" data-cy="status">
-            <option [ngValue]="null">{{ 'eCommerceApp.OrderStatus.null' | translate }}</option>
+            <option [ngValue]="null">{{ 'storeApp.OrderStatus.null' | translate }}</option>
             <option *ngFor="let orderStatus of orderStatusValues" [value]="orderStatus">
-              {{ 'eCommerceApp.OrderStatus.' + orderStatus | translate }}
+              {{ 'storeApp.OrderStatus.' + orderStatus | translate }}
             </option>
           </select>
           <div *ngIf="editForm.get('status')!.invalid && (editForm.get('status')!.dirty || editForm.get('status')!.touched)">
@@ -64,7 +64,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.productOrder.code" for="field_code">Code</label>
+          <label class="form-label" jhiTranslate="storeApp.productOrder.code" for="field_code">Code</label>
           <input type="text" class="form-control" name="code" id="field_code" data-cy="code" formControlName="code" />
           <div *ngIf="editForm.get('code')!.invalid && (editForm.get('code')!.dirty || editForm.get('code')!.touched)">
             <small class="form-text text-danger" *ngIf="editForm.get('code')?.errors?.required" jhiTranslate="entity.validation.required">
@@ -74,7 +74,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.productOrder.customer" for="field_customer">Customer</label>
+          <label class="form-label" jhiTranslate="storeApp.productOrder.customer" for="field_customer">Customer</label>
           <select class="form-control" id="field_customer" data-cy="customer" name="customer" formControlName="customer">
             <option [ngValue]="null"></option>
             <option

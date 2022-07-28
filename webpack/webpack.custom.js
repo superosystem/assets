@@ -26,7 +26,7 @@ module.exports = async (config, options, targetOptions) => {
         extensions: ['js', 'ts'],
       }),
       new WebpackNotifierPlugin({
-        title: 'E Commerce',
+        title: 'Store',
         contentImage: path.join(__dirname, 'logo-jhipster.png'),
       })
     );

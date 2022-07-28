@@ -1,11 +1,11 @@
 <div>
   <h2 id="page-heading" data-cy="ProductHeading">
-    <span jhiTranslate="eCommerceApp.product.home.title">Products</span>
+    <span jhiTranslate="storeApp.product.home.title">Products</span>
 
     <div class="d-flex justify-content-end">
       <button class="btn btn-info me-2" (click)="loadPage()" [disabled]="isLoading">
         <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
-        <span jhiTranslate="eCommerceApp.product.home.refreshListLabel">Refresh List</span>
+        <span jhiTranslate="storeApp.product.home.refreshListLabel">Refresh List</span>
       </button>
 
       <button
@@ -15,7 +15,7 @@
         [routerLink]="['/product/new']"
       >
         <fa-icon icon="plus"></fa-icon>
-        <span jhiTranslate="eCommerceApp.product.home.createLabel"> Create a new Product </span>
+        <span jhiTranslate="storeApp.product.home.createLabel"> Create a new Product </span>
       </button>
     </div>
   </h2>
@@ -25,7 +25,7 @@
   <jhi-alert></jhi-alert>
 
   <div class="alert alert-warning" id="no-result" *ngIf="products?.length === 0">
-    <span jhiTranslate="eCommerceApp.product.home.notFound">No products found</span>
+    <span jhiTranslate="storeApp.product.home.notFound">No products found</span>
   </div>
 
   <div class="table-responsive" id="entities" *ngIf="products && products.length > 0">
@@ -33,21 +33,21 @@
       <thead>
         <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="loadPage()">
           <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
-          <th scope="col" jhiSortBy="name"><span jhiTranslate="eCommerceApp.product.name">Name</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="name"><span jhiTranslate="storeApp.product.name">Name</span> <fa-icon icon="sort"></fa-icon></th>
           <th scope="col" jhiSortBy="description">
-            <span jhiTranslate="eCommerceApp.product.description">Description</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.product.description">Description</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="price">
-            <span jhiTranslate="eCommerceApp.product.price">Price</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.product.price">Price</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="sizeProduct">
-            <span jhiTranslate="eCommerceApp.product.sizeProduct">Size Product</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.product.sizeProduct">Size Product</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="image">
-            <span jhiTranslate="eCommerceApp.product.image">Image</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.product.image">Image</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="productCategory.id">
-            <span jhiTranslate="eCommerceApp.product.productCategory">Product Category</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.product.productCategory">Product Category</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col"></th>
         </tr>
@@ -60,7 +60,7 @@
           <td>{{ product.name }}</td>
           <td>{{ product.description }}</td>
           <td>{{ product.price }}</td>
-          <td jhiTranslate="{{ 'eCommerceApp.SizeProduct.' + product.sizeProduct }}">{{ product.sizeProduct }}</td>
+          <td jhiTranslate="{{ 'storeApp.SizeProduct.' + product.sizeProduct }}">{{ product.sizeProduct }}</td>
           <td>
             <a *ngIf="product.image" (click)="openFile(product.image, product.imageContentType)">
               <img [src]="'data:' + product.imageContentType + ';base64,' + product.image" style="max-height: 30px" alt="product image" />

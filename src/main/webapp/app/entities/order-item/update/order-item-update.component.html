@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center">
   <div class="col-8">
     <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
-      <h2 id="jhi-order-item-heading" data-cy="OrderItemCreateUpdateHeading" jhiTranslate="eCommerceApp.orderItem.home.createOrEditLabel">
+      <h2 id="jhi-order-item-heading" data-cy="OrderItemCreateUpdateHeading" jhiTranslate="storeApp.orderItem.home.createOrEditLabel">
         Create or edit a Order Item
       </h2>
 
@@ -14,7 +14,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.orderItem.quantity" for="field_quantity">Quantity</label>
+          <label class="form-label" jhiTranslate="storeApp.orderItem.quantity" for="field_quantity">Quantity</label>
           <input type="number" class="form-control" name="quantity" id="field_quantity" data-cy="quantity" formControlName="quantity" />
           <div *ngIf="editForm.get('quantity')!.invalid && (editForm.get('quantity')!.dirty || editForm.get('quantity')!.touched)">
             <small
@@ -43,7 +43,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.orderItem.totalPrice" for="field_totalPrice">Total Price</label>
+          <label class="form-label" jhiTranslate="storeApp.orderItem.totalPrice" for="field_totalPrice">Total Price</label>
           <input
             type="number"
             class="form-control"
@@ -79,11 +79,11 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.orderItem.status" for="field_status">Status</label>
+          <label class="form-label" jhiTranslate="storeApp.orderItem.status" for="field_status">Status</label>
           <select class="form-control" name="status" formControlName="status" id="field_status" data-cy="status">
-            <option [ngValue]="null">{{ 'eCommerceApp.OrderItemStatus.null' | translate }}</option>
+            <option [ngValue]="null">{{ 'storeApp.OrderItemStatus.null' | translate }}</option>
             <option *ngFor="let orderItemStatus of orderItemStatusValues" [value]="orderItemStatus">
-              {{ 'eCommerceApp.OrderItemStatus.' + orderItemStatus | translate }}
+              {{ 'storeApp.OrderItemStatus.' + orderItemStatus | translate }}
             </option>
           </select>
           <div *ngIf="editForm.get('status')!.invalid && (editForm.get('status')!.dirty || editForm.get('status')!.touched)">
@@ -94,7 +94,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.orderItem.product" for="field_product">Product</label>
+          <label class="form-label" jhiTranslate="storeApp.orderItem.product" for="field_product">Product</label>
           <select class="form-control" id="field_product" data-cy="product" name="product" formControlName="product">
             <option [ngValue]="null"></option>
             <option
@@ -107,7 +107,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.orderItem.order" for="field_order">Order</label>
+          <label class="form-label" jhiTranslate="storeApp.orderItem.order" for="field_order">Order</label>
           <select class="form-control" id="field_order" data-cy="order" name="order" formControlName="order">
             <option [ngValue]="null"></option>
             <option

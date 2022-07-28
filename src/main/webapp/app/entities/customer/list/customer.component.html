@@ -1,11 +1,11 @@
 <div>
   <h2 id="page-heading" data-cy="CustomerHeading">
-    <span jhiTranslate="eCommerceApp.customer.home.title">Customers</span>
+    <span jhiTranslate="storeApp.customer.home.title">Customers</span>
 
     <div class="d-flex justify-content-end">
       <button class="btn btn-info me-2" (click)="loadPage()" [disabled]="isLoading">
         <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
-        <span jhiTranslate="eCommerceApp.customer.home.refreshListLabel">Refresh List</span>
+        <span jhiTranslate="storeApp.customer.home.refreshListLabel">Refresh List</span>
       </button>
 
       <button
@@ -15,7 +15,7 @@
         [routerLink]="['/customer/new']"
       >
         <fa-icon icon="plus"></fa-icon>
-        <span jhiTranslate="eCommerceApp.customer.home.createLabel"> Create a new Customer </span>
+        <span jhiTranslate="storeApp.customer.home.createLabel"> Create a new Customer </span>
       </button>
     </div>
   </h2>
@@ -25,7 +25,7 @@
   <jhi-alert></jhi-alert>
 
   <div class="alert alert-warning" id="no-result" *ngIf="customers?.length === 0">
-    <span jhiTranslate="eCommerceApp.customer.home.notFound">No customers found</span>
+    <span jhiTranslate="storeApp.customer.home.notFound">No customers found</span>
   </div>
 
   <div class="table-responsive" id="entities" *ngIf="customers && customers.length > 0">
@@ -34,32 +34,32 @@
         <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="loadPage()">
           <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
           <th scope="col" jhiSortBy="firstName">
-            <span jhiTranslate="eCommerceApp.customer.firstName">First Name</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.customer.firstName">First Name</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="lastName">
-            <span jhiTranslate="eCommerceApp.customer.lastName">Last Name</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.customer.lastName">Last Name</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="gender">
-            <span jhiTranslate="eCommerceApp.customer.gender">Gender</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.customer.gender">Gender</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="email">
-            <span jhiTranslate="eCommerceApp.customer.email">Email</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.customer.email">Email</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="phone">
-            <span jhiTranslate="eCommerceApp.customer.phone">Phone</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.customer.phone">Phone</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="addressLine1">
-            <span jhiTranslate="eCommerceApp.customer.addressLine1">Address Line 1</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.customer.addressLine1">Address Line 1</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="addressLine2">
-            <span jhiTranslate="eCommerceApp.customer.addressLine2">Address Line 2</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.customer.addressLine2">Address Line 2</span> <fa-icon icon="sort"></fa-icon>
           </th>
-          <th scope="col" jhiSortBy="city"><span jhiTranslate="eCommerceApp.customer.city">City</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="city"><span jhiTranslate="storeApp.customer.city">City</span> <fa-icon icon="sort"></fa-icon></th>
           <th scope="col" jhiSortBy="country">
-            <span jhiTranslate="eCommerceApp.customer.country">Country</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.customer.country">Country</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="user.id">
-            <span jhiTranslate="eCommerceApp.customer.user">User</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.customer.user">User</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col"></th>
         </tr>
@@ -71,7 +71,7 @@
           </td>
           <td>{{ customer.firstName }}</td>
           <td>{{ customer.lastName }}</td>
-          <td jhiTranslate="{{ 'eCommerceApp.Gender.' + customer.gender }}">{{ customer.gender }}</td>
+          <td jhiTranslate="{{ 'storeApp.Gender.' + customer.gender }}">{{ customer.gender }}</td>
           <td>{{ customer.email }}</td>
           <td>{{ customer.phone }}</td>
           <td>{{ customer.addressLine1 }}</td>

@@ -1,11 +1,11 @@
 <div>
   <h2 id="page-heading" data-cy="ProductCategoryHeading">
-    <span jhiTranslate="eCommerceApp.productCategory.home.title">Product Categories</span>
+    <span jhiTranslate="storeApp.productCategory.home.title">Product Categories</span>
 
     <div class="d-flex justify-content-end">
       <button class="btn btn-info me-2" (click)="loadAll()" [disabled]="isLoading">
         <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
-        <span jhiTranslate="eCommerceApp.productCategory.home.refreshListLabel">Refresh List</span>
+        <span jhiTranslate="storeApp.productCategory.home.refreshListLabel">Refresh List</span>
       </button>
 
       <button
@@ -15,7 +15,7 @@
         [routerLink]="['/product-category/new']"
       >
         <fa-icon icon="plus"></fa-icon>
-        <span jhiTranslate="eCommerceApp.productCategory.home.createLabel"> Create a new Product Category </span>
+        <span jhiTranslate="storeApp.productCategory.home.createLabel"> Create a new Product Category </span>
       </button>
     </div>
   </h2>
@@ -25,7 +25,7 @@
   <jhi-alert></jhi-alert>
 
   <div class="alert alert-warning" id="no-result" *ngIf="productCategories?.length === 0">
-    <span jhiTranslate="eCommerceApp.productCategory.home.notFound">No productCategories found</span>
+    <span jhiTranslate="storeApp.productCategory.home.notFound">No productCategories found</span>
   </div>
 
   <div class="table-responsive" id="entities" *ngIf="productCategories && productCategories.length > 0">
@@ -33,8 +33,8 @@
       <thead>
         <tr>
           <th scope="col"><span jhiTranslate="global.field.id">ID</span></th>
-          <th scope="col"><span jhiTranslate="eCommerceApp.productCategory.name">Name</span></th>
-          <th scope="col"><span jhiTranslate="eCommerceApp.productCategory.description">Description</span></th>
+          <th scope="col"><span jhiTranslate="storeApp.productCategory.name">Name</span></th>
+          <th scope="col"><span jhiTranslate="storeApp.productCategory.description">Description</span></th>
           <th scope="col"></th>
         </tr>
       </thead>

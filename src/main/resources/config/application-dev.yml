@@ -18,7 +18,7 @@ logging:
     ROOT: DEBUG
     tech.jhipster: DEBUG
     org.hibernate.SQL: DEBUG
-    com.gusrylmubarok.ecommerce: DEBUG
+    com.gusrylmubarok.store: DEBUG
 
 eureka:
   instance:
@@ -42,14 +42,14 @@ spring:
     config:
       uri: http://admin:${jhipster.registry.password}@localhost:8761/config
       # name of the config server's property source (file.yml) that we want to use
-      name: ECommerce
+      name: Store
       profile: dev
       label: main # toggle to switch to a different version of the configuration as stored in git
       # it can be set to any label, branch or commit of the configuration source Git repository
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./build/h2db/db/ecommerce;DB_CLOSE_DELAY=-1
-    username: ECommerce
+    url: jdbc:h2:file:./build/h2db/db/store;DB_CLOSE_DELAY=-1
+    username: Store
     password:
     hikari:
       poolName: Hikari

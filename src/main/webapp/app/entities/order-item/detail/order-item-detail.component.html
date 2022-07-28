@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center">
   <div class="col-8">
     <div *ngIf="orderItem">
-      <h2 data-cy="orderItemDetailsHeading"><span jhiTranslate="eCommerceApp.orderItem.detail.title">Order Item</span></h2>
+      <h2 data-cy="orderItemDetailsHeading"><span jhiTranslate="storeApp.orderItem.detail.title">Order Item</span></h2>
 
       <hr />
 
@@ -14,25 +14,25 @@
         <dd>
           <span>{{ orderItem.id }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.orderItem.quantity">Quantity</span></dt>
+        <dt><span jhiTranslate="storeApp.orderItem.quantity">Quantity</span></dt>
         <dd>
           <span>{{ orderItem.quantity }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.orderItem.totalPrice">Total Price</span></dt>
+        <dt><span jhiTranslate="storeApp.orderItem.totalPrice">Total Price</span></dt>
         <dd>
           <span>{{ orderItem.totalPrice }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.orderItem.status">Status</span></dt>
+        <dt><span jhiTranslate="storeApp.orderItem.status">Status</span></dt>
         <dd>
-          <span jhiTranslate="{{ 'eCommerceApp.OrderItemStatus.' + orderItem.status }}">{{ orderItem.status }}</span>
+          <span jhiTranslate="{{ 'storeApp.OrderItemStatus.' + orderItem.status }}">{{ orderItem.status }}</span>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.orderItem.product">Product</span></dt>
+        <dt><span jhiTranslate="storeApp.orderItem.product">Product</span></dt>
         <dd>
           <div *ngIf="orderItem.product">
             <a [routerLink]="['/product', orderItem.product?.id, 'view']">{{ orderItem.product?.id }}</a>
           </div>
         </dd>
-        <dt><span jhiTranslate="eCommerceApp.orderItem.order">Order</span></dt>
+        <dt><span jhiTranslate="storeApp.orderItem.order">Order</span></dt>
         <dd>
           <div *ngIf="orderItem.order">
             <a [routerLink]="['/product-order', orderItem.order?.id, 'view']">{{ orderItem.order?.id }}</a>

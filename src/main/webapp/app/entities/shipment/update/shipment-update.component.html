@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center">
   <div class="col-8">
     <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
-      <h2 id="jhi-shipment-heading" data-cy="ShipmentCreateUpdateHeading" jhiTranslate="eCommerceApp.shipment.home.createOrEditLabel">
+      <h2 id="jhi-shipment-heading" data-cy="ShipmentCreateUpdateHeading" jhiTranslate="storeApp.shipment.home.createOrEditLabel">
         Create or edit a Shipment
       </h2>
 
@@ -14,7 +14,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.shipment.trackingCode" for="field_trackingCode">Tracking Code</label>
+          <label class="form-label" jhiTranslate="storeApp.shipment.trackingCode" for="field_trackingCode">Tracking Code</label>
           <input
             type="text"
             class="form-control"
@@ -26,7 +26,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.shipment.date" for="field_date">Date</label>
+          <label class="form-label" jhiTranslate="storeApp.shipment.date" for="field_date">Date</label>
           <div class="d-flex">
             <input
               id="field_date"
@@ -53,12 +53,12 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.shipment.details" for="field_details">Details</label>
+          <label class="form-label" jhiTranslate="storeApp.shipment.details" for="field_details">Details</label>
           <input type="text" class="form-control" name="details" id="field_details" data-cy="details" formControlName="details" />
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.shipment.invoice" for="field_invoice">Invoice</label>
+          <label class="form-label" jhiTranslate="storeApp.shipment.invoice" for="field_invoice">Invoice</label>
           <select class="form-control" id="field_invoice" data-cy="invoice" name="invoice" formControlName="invoice">
             <option [ngValue]="null"></option>
             <option

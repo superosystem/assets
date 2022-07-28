@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center">
   <div class="col-8">
     <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
-      <h2 id="jhi-invoice-heading" data-cy="InvoiceCreateUpdateHeading" jhiTranslate="eCommerceApp.invoice.home.createOrEditLabel">
+      <h2 id="jhi-invoice-heading" data-cy="InvoiceCreateUpdateHeading" jhiTranslate="storeApp.invoice.home.createOrEditLabel">
         Create or edit a Invoice
       </h2>
 
@@ -14,7 +14,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.invoice.date" for="field_date">Date</label>
+          <label class="form-label" jhiTranslate="storeApp.invoice.date" for="field_date">Date</label>
           <div class="d-flex">
             <input
               id="field_date"
@@ -41,16 +41,16 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.invoice.details" for="field_details">Details</label>
+          <label class="form-label" jhiTranslate="storeApp.invoice.details" for="field_details">Details</label>
           <input type="text" class="form-control" name="details" id="field_details" data-cy="details" formControlName="details" />
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.invoice.status" for="field_status">Status</label>
+          <label class="form-label" jhiTranslate="storeApp.invoice.status" for="field_status">Status</label>
           <select class="form-control" name="status" formControlName="status" id="field_status" data-cy="status">
-            <option [ngValue]="null">{{ 'eCommerceApp.InvoiceStatus.null' | translate }}</option>
+            <option [ngValue]="null">{{ 'storeApp.InvoiceStatus.null' | translate }}</option>
             <option *ngFor="let invoiceStatus of invoiceStatusValues" [value]="invoiceStatus">
-              {{ 'eCommerceApp.InvoiceStatus.' + invoiceStatus | translate }}
+              {{ 'storeApp.InvoiceStatus.' + invoiceStatus | translate }}
             </option>
           </select>
           <div *ngIf="editForm.get('status')!.invalid && (editForm.get('status')!.dirty || editForm.get('status')!.touched)">
@@ -61,7 +61,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.invoice.paymentMethod" for="field_paymentMethod">Payment Method</label>
+          <label class="form-label" jhiTranslate="storeApp.invoice.paymentMethod" for="field_paymentMethod">Payment Method</label>
           <select
             class="form-control"
             name="paymentMethod"
@@ -69,9 +69,9 @@
             id="field_paymentMethod"
             data-cy="paymentMethod"
           >
-            <option [ngValue]="null">{{ 'eCommerceApp.PaymentMethod.null' | translate }}</option>
+            <option [ngValue]="null">{{ 'storeApp.PaymentMethod.null' | translate }}</option>
             <option *ngFor="let paymentMethod of paymentMethodValues" [value]="paymentMethod">
-              {{ 'eCommerceApp.PaymentMethod.' + paymentMethod | translate }}
+              {{ 'storeApp.PaymentMethod.' + paymentMethod | translate }}
             </option>
           </select>
           <div
@@ -90,7 +90,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.invoice.paymentDate" for="field_paymentDate">Payment Date</label>
+          <label class="form-label" jhiTranslate="storeApp.invoice.paymentDate" for="field_paymentDate">Payment Date</label>
           <div class="d-flex">
             <input
               id="field_paymentDate"
@@ -121,7 +121,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.invoice.paymentAmount" for="field_paymentAmount">Payment Amount</label>
+          <label class="form-label" jhiTranslate="storeApp.invoice.paymentAmount" for="field_paymentAmount">Payment Amount</label>
           <input
             type="number"
             class="form-control"
@@ -153,7 +153,7 @@
         </div>
 
         <div class="row mb-3">
-          <label class="form-label" jhiTranslate="eCommerceApp.invoice.order" for="field_order">Order</label>
+          <label class="form-label" jhiTranslate="storeApp.invoice.order" for="field_order">Order</label>
           <select class="form-control" id="field_order" data-cy="order" name="order" formControlName="order">
             <option [ngValue]="null"></option>
             <option

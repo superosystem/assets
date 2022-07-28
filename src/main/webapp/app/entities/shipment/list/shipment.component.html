@@ -1,11 +1,11 @@
 <div>
   <h2 id="page-heading" data-cy="ShipmentHeading">
-    <span jhiTranslate="eCommerceApp.shipment.home.title">Shipments</span>
+    <span jhiTranslate="storeApp.shipment.home.title">Shipments</span>
 
     <div class="d-flex justify-content-end">
       <button class="btn btn-info me-2" (click)="loadPage()" [disabled]="isLoading">
         <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
-        <span jhiTranslate="eCommerceApp.shipment.home.refreshListLabel">Refresh List</span>
+        <span jhiTranslate="storeApp.shipment.home.refreshListLabel">Refresh List</span>
       </button>
 
       <button
@@ -15,7 +15,7 @@
         [routerLink]="['/shipment/new']"
       >
         <fa-icon icon="plus"></fa-icon>
-        <span jhiTranslate="eCommerceApp.shipment.home.createLabel"> Create a new Shipment </span>
+        <span jhiTranslate="storeApp.shipment.home.createLabel"> Create a new Shipment </span>
       </button>
     </div>
   </h2>
@@ -25,7 +25,7 @@
   <jhi-alert></jhi-alert>
 
   <div class="alert alert-warning" id="no-result" *ngIf="shipments?.length === 0">
-    <span jhiTranslate="eCommerceApp.shipment.home.notFound">No shipments found</span>
+    <span jhiTranslate="storeApp.shipment.home.notFound">No shipments found</span>
   </div>
 
   <div class="table-responsive" id="entities" *ngIf="shipments && shipments.length > 0">
@@ -34,14 +34,14 @@
         <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="loadPage()">
           <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
           <th scope="col" jhiSortBy="trackingCode">
-            <span jhiTranslate="eCommerceApp.shipment.trackingCode">Tracking Code</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.shipment.trackingCode">Tracking Code</span> <fa-icon icon="sort"></fa-icon>
           </th>
-          <th scope="col" jhiSortBy="date"><span jhiTranslate="eCommerceApp.shipment.date">Date</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="date"><span jhiTranslate="storeApp.shipment.date">Date</span> <fa-icon icon="sort"></fa-icon></th>
           <th scope="col" jhiSortBy="details">
-            <span jhiTranslate="eCommerceApp.shipment.details">Details</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.shipment.details">Details</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="invoice.id">
-            <span jhiTranslate="eCommerceApp.shipment.invoice">Invoice</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="storeApp.shipment.invoice">Invoice</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col"></th>
         </tr>

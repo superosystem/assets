@@ -24,13 +24,13 @@ plugins {
     //jhipster-needle-gradle-plugins - JHipster will add additional gradle plugins here
 }
 
-group = "com.gusrylmubarok.ecommerce"
+group = "com.gusrylmubarok.store"
 version = "0.0.1-SNAPSHOT"
 
 description = ""
 
-sourceCompatibility=17
-targetCompatibility=17
+sourceCompatibility=11
+targetCompatibility=11
 assert System.properties["java.specification.version"] == "11" || "12" || "13" || "14" || "15" || "16" || "17" || "18"
 
 apply from: "gradle/docker.gradle"
@@ -83,7 +83,7 @@ eclipse {
 defaultTasks "bootRun"
 
 springBoot {
-    mainClass = "com.gusrylmubarok.ecommerce.ECommerceApp"
+    mainClass = "com.gusrylmubarok.store.StoreApp"
 }
 
 test {
@@ -144,8 +144,8 @@ liquibase {
     activities {
         main {
             driver "org.h2.Driver"
-            url "jdbc:h2:file:./build/h2db/db/ecommerce"
-            username "ECommerce"
+            url "jdbc:h2:file:./build/h2db/db/store"
+            username "Store"
             password ""
             changeLogFile "src/main/resources/config/liquibase/master.xml"
             defaultSchemaName ""
@@ -154,11 +154,11 @@ liquibase {
         }
         diffLog {
             driver "org.h2.Driver"
-            url "jdbc:h2:file:./build/h2db/db/ecommerce"
-            username "ECommerce"
+            url "jdbc:h2:file:./build/h2db/db/store"
+            username "Store"
             password ""
             changeLogFile project.ext.diffChangelogFile
-            referenceUrl "hibernate:spring:com.gusrylmubarok.ecommerce.domain?dialect=org.hibernate.dialect.H2Dialect&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
+            referenceUrl "hibernate:spring:com.gusrylmubarok.store.domain?dialect=org.hibernate.dialect.H2Dialect&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
             defaultSchemaName ""
             logLevel "debug"
             classpath "$buildDir/classes/java/main"

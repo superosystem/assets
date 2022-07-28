@@ -10,7 +10,7 @@
         Added the entity Product.
     -->
     <changeSet id="20220728082332-1" author="jhipster">
-        <createTable tableName="product" remarks="Product sold by the Ecommerce">
+        <createTable tableName="product" remarks="Product sold by the Store">
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>

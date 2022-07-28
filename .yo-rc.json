@@ -2,7 +2,7 @@
   "generator-jhipster": {
     "applicationType": "monolith",
     "authenticationType": "jwt",
-    "baseName": "ECommerce",
+    "baseName": "Store",
     "blueprints": [],
     "buildTool": "gradle",
     "cacheProvider": "hazelcast",
@@ -29,7 +29,7 @@
     "messageBroker": false,
     "nativeLanguage": "en",
     "otherModules": [],
-    "packageName": "com.gusrylmubarok.ecommerce",
+    "packageName": "com.gusrylmubarok.store",
     "pages": [],
     "prodDatabaseType": "mysql",
     "reactive": false,

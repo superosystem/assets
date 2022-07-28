@@ -1,28 +1,28 @@
 # This configuration is intended for development purpose, it's **your** responsibility to harden it for production
 version: '3.8'
 services:
-  ecommerce-app:
-    image: ecommerce
+  store-app:
+    image: store
     environment:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,api-docs
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
       - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka
       - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config
-      - SPRING_DATASOURCE_URL=jdbc:mysql://ecommerce-mysql:3306/ecommerce?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
-      - SPRING_LIQUIBASE_URL=jdbc:mysql://ecommerce-mysql:3306/ecommerce?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_URL=jdbc:mysql://store-mysql:3306/store?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+      - SPRING_LIQUIBASE_URL=jdbc:mysql://store-mysql:3306/store?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
     # If you want to expose these ports outside your dev PC,
     # remove the "127.0.0.1:" prefix
     ports:
       - 127.0.0.1:8080:8080
-  ecommerce-mysql:
+  store-mysql:
     image: mysql:8.0.28
     # volumes:
-    #   - ~/volumes/jhipster/ECommerce/mysql/:/var/lib/mysql/
+    #   - ~/volumes/jhipster/Store/mysql/:/var/lib/mysql/
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
-      - MYSQL_DATABASE=ecommerce
+      - MYSQL_DATABASE=store
     # If you want to expose these ports outside your dev PC,
     # remove the "127.0.0.1:" prefix
     ports:
