@@ -1,0 +1,50 @@
+{
+  "applications": "*",
+  "changelogDate": "20220728082332",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "product",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "sizeProduct",
+      "fieldType": "SizeProduct",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "S,M,L,XL,XXL"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Product sold by the Ecommerce",
+  "jpaMetamodelFiltering": false,
+  "name": "Product",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "productCategory",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "productCategory",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

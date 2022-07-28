@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20220728082336",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "order_item",
+  "fields": [
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "totalPrice",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "OrderItemStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "AVAILABLE,OUT_OF_STOCK,BACK_ORDER"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "OrderItem",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "orderItem",
+      "relationshipName": "product",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "productOrder",
+      "otherEntityRelationshipName": "orderItem",
+      "relationshipName": "order",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
